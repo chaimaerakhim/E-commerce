@@ -53,12 +53,15 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.SelfHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -146,20 +149,127 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Article.cs" />
+    <Compile Include="Models\Categorie.cs" />
+    <Compile Include="Models\Client.cs" />
+    <Compile Include="Models\Commande.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\easy-responsive-tabs.css" />
+    <Content Include="Content\css\flexslider.css" />
+    <Content Include="Content\css\font-awesome.css" />
+    <Content Include="Content\css\jquery-ui.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\css\team.css" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\1.png" />
+    <Content Include="Content\images\2.png" />
+    <Content Include="Content\images\ab_pic.jpg" />
+    <Content Include="Content\images\arrow.png" />
+    <Content Include="Content\images\b1.jpg" />
+    <Content Include="Content\images\b2.jpg" />
+    <Content Include="Content\images\b3.jpg" />
+    <Content Include="Content\images\b4.jpg" />
+    <Content Include="Content\images\b5.jpg" />
+    <Content Include="Content\images\b6.jpg" />
+    <Content Include="Content\images\b7.jpg" />
+    <Content Include="Content\images\b8.jpg" />
+    <Content Include="Content\images\banner1.jpg" />
+    <Content Include="Content\images\banner2.jpg" />
+    <Content Include="Content\images\banner3.jpg" />
+    <Content Include="Content\images\banner4.jpg" />
+    <Content Include="Content\images\banner5.jpg" />
+    <Content Include="Content\images\bb1.jpg" />
+    <Content Include="Content\images\bb2.jpg" />
+    <Content Include="Content\images\bottom1.jpg" />
+    <Content Include="Content\images\bottom2.jpg" />
+    <Content Include="Content\images\bottom3.jpg" />
+    <Content Include="Content\images\bottom4.jpg" />
+    <Content Include="Content\images\bot_1.jpg" />
+    <Content Include="Content\images\bot_2.jpg" />
+    <Content Include="Content\images\btn_next.png" />
+    <Content Include="Content\images\btn_pause.png" />
+    <Content Include="Content\images\btn_play.png" />
+    <Content Include="Content\images\btn_prev.png" />
+    <Content Include="Content\images\close_1.png" />
+    <Content Include="Content\images\d1.jpg" />
+    <Content Include="Content\images\d2.jpg" />
+    <Content Include="Content\images\d3.jpg" />
+    <Content Include="Content\images\inner1.jpg" />
+    <Content Include="Content\images\inner2.jpg" />
+    <Content Include="Content\images\log_pic.jpg" />
+    <Content Include="Content\images\m1.jpg" />
+    <Content Include="Content\images\m2.jpg" />
+    <Content Include="Content\images\m3.jpg" />
+    <Content Include="Content\images\m4.jpg" />
+    <Content Include="Content\images\m5.jpg" />
+    <Content Include="Content\images\m6.jpg" />
+    <Content Include="Content\images\m7.jpg" />
+    <Content Include="Content\images\m8.jpg" />
+    <Content Include="Content\images\mark1.png" />
+    <Content Include="Content\images\mid.jpg" />
+    <Content Include="Content\images\s1.jpg" />
+    <Content Include="Content\images\s2.jpg" />
+    <Content Include="Content\images\s3.jpg" />
+    <Content Include="Content\images\s4.jpg" />
+    <Content Include="Content\images\s5.jpg" />
+    <Content Include="Content\images\s6.jpg" />
+    <Content Include="Content\images\s7.jpg" />
+    <Content Include="Content\images\s8.jpeg" />
+    <Content Include="Content\images\s8.jpg" />
+    <Content Include="Content\images\search.png" />
+    <Content Include="Content\images\t1.jpg" />
+    <Content Include="Content\images\t2.jpg" />
+    <Content Include="Content\images\t3.jpg" />
+    <Content Include="Content\images\t4.jpg" />
+    <Content Include="Content\images\tick-mark1.png" />
+    <Content Include="Content\images\top1.jpg" />
+    <Content Include="Content\images\top2.jpg" />
+    <Content Include="Content\images\up_arrow.png" />
+    <Content Include="Content\images\w1.jpg" />
+    <Content Include="Content\images\w2.jpg" />
+    <Content Include="Content\images\w3.jpg" />
+    <Content Include="Content\images\w4.jpg" />
+    <Content Include="Content\images\w5.jpg" />
+    <Content Include="Content\images\w6.jpg" />
+    <Content Include="Content\images\w7.jpg" />
+    <Content Include="Content\images\w8.jpg" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\easy-responsive-tabs.js" />
+    <Content Include="Content\js\imagezoom.js" />
+    <Content Include="Content\js\jquery-2.1.4.min.js" />
+    <Content Include="Content\js\jquery-ui.js" />
+    <Content Include="Content\js\jquery.countup.js" />
+    <Content Include="Content\js\jquery.easing.min.js" />
+    <Content Include="Content\js\jquery.flexslider.js" />
+    <Content Include="Content\js\jquery.waypoints.min.js" />
+    <Content Include="Content\js\minicart.min.js" />
+    <Content Include="Content\js\modernizr.custom.js" />
+    <Content Include="Content\js\move-top.js" />
+    <Content Include="Content\js\responsiveslides.min.js" />
+    <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -180,15 +290,17 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Mens.cshtml" />
+    <Content Include="Views\Home\Single.cshtml" />
+    <Content Include="Views\Home\Womens.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
